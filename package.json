@@ -5,7 +5,8 @@
     "start": "npx ng serve",
     "build": "npx ng build",
     "test": "npx ng test",
-    "lint": "npx ng lint",
+    "lint:check": "npx ng lint",
+    "lint:fix": "npx ng lint --fix",
     "format:check": "npx prettier --check --ignore-path .gitignore .",
     "format:fix": "npx prettier --write --ignore-path .gitignore .",
     "e2e": "npx ng e2e"
@@ -43,6 +44,8 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~3.8.3"
   }
 }
