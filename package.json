@@ -2,14 +2,20 @@
   "name": "linkedin-clone-frontend",
   "version": "0.0.0",
   "scripts": {
-    "start": "npx ng serve",
-    "build": "npx ng build",
-    "test": "npx ng test",
-    "lint:check": "npx ng lint",
-    "lint:fix": "npx ng lint --fix",
-    "format:check": "npx prettier --check --ignore-path .gitignore .",
-    "format:fix": "npx prettier --write --ignore-path .gitignore .",
-    "e2e": "npx ng e2e"
+    "start": "yarn ng serve",
+    "build": "yarn ng build",
+    "test": "yarn ng test",
+    "lint:check": "yarn ng lint",
+    "lint:fix": "yarn ng lint --fix",
+    "format:check": "yarn pretty-quick --check --staged",
+    "format:fix": "yarn prettier --write --ignore-path .gitignore .",
+    "pre-commit": "yarn run-s format:check lint:check",
+    "e2e": "yarn ng e2e"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run pre-commit"
+    }
   },
   "private": true,
   "dependencies": {
@@ -33,6 +39,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",
@@ -40,7 +47,9 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
