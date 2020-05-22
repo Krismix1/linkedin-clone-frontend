@@ -9,9 +9,10 @@
     "lint:angular": "yarn ng lint",
     "lint:angular-fix": "yarn ng lint --fix",
     "lint:sass": "yarn stylelint \"src/**/*.scss\"",
-    "format:check": "yarn pretty-quick --check --staged",
+    "format:check": "yarn pretty-quick --check",
+    "format:pre-commit": "yarn pretty-quick --check --staged",
     "format:fix": "yarn prettier --write --ignore-path .gitignore .",
-    "pre-commit": "yarn run-s format:check lint:angular lint:sass test:ci",
+    "pre-commit": "yarn run-s format:pre-commit lint:angular lint:sass test:ci",
     "e2e": "yarn ng e2e"
   },
   "husky": {
