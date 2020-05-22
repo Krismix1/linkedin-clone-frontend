@@ -4,13 +4,14 @@
   "scripts": {
     "start": "yarn ng serve",
     "build": "yarn ng build",
-    "test": "yarn ng test",
+    "test": "yarn ng test --code-coverage",
+    "test:ci": "yarn ng test --no-watch --code-coverage --browsers ChromeHeadless,FirefoxHeadless",
     "lint:angular": "yarn ng lint",
     "lint:angular-fix": "yarn ng lint --fix",
     "lint:sass": "yarn stylelint \"src/**/*.scss\"",
     "format:check": "yarn pretty-quick --check --staged",
     "format:fix": "yarn prettier --write --ignore-path .gitignore .",
-    "pre-commit": "yarn run-s format:check lint:angular lint:sass",
+    "pre-commit": "yarn run-s format:check lint:angular lint:sass test:ci",
     "e2e": "yarn ng e2e"
   },
   "husky": {
@@ -47,6 +48,7 @@
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-firefox-launcher": "^1.3.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "npm-run-all": "^4.1.5",

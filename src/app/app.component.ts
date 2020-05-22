@@ -12,8 +12,6 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.message$ = this.http.get<{ message: string }>(
-      'http://localhost:8080/message'
-    );
+    this.message$ = this.http.get<{ message: string }>('http://localhost:8080/message');
   }
 }
