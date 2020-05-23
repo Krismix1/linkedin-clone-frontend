@@ -4,16 +4,14 @@ import { EMPTY, Observable } from 'rxjs';
 
 @Component({
   selector: 'ap-lc-root',
-  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
   message$: Observable<{ message: string }> = EMPTY;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.message$ = this.http.get<{ message: string }>(
-      'http://localhost:8080/message'
-    );
+    this.message$ = this.http.get<{ message: string }>('http://localhost:8080/message');
   }
 }

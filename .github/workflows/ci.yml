@@ -1,13 +1,17 @@
-name: Lint, format and test checks
+name: Lint, format, and test checks
 
 on:
   push:
-    branches: ['**']
+    branches:
+      - '**'
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   build:
+    # Ubuntu comes with Chrome Headless 81.0.4044.138 and
+    # Firefox 76.0 pre-installed
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +27,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
       - name: Yarn cache
         uses: actions/cache@v1
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}

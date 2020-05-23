@@ -1,0 +1,6 @@
+{
+  "extends": "@wemake-services/stylelint-config-scss",
+  "rules": {
+    "no-empty-source": null
+  }
+}
