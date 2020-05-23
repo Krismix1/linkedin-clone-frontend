@@ -1,5 +1,7 @@
 # LinkedIn Clone Frontend
 
+![Lint, format and test checks](https://github.com/automatic-potato/linkedin-clone-frontend/workflows/Lint,%20format%20and%20test%20checks/badge.svg?branch=master)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
 ## Development
