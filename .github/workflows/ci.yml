@@ -8,6 +8,8 @@ on:
 
 jobs:
   build:
+    # Ubuntu comes with Chrome Headless 81.0.4044.138 and
+    # Firefox 76.0 pre-installed
     runs-on: ubuntu-latest
 
     steps:
