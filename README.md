@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4. Run the dev server using `yarn start`.
 5. Open the link from the terminal ouput (typically `http://localhost:4200/`) in your browser.
 
-## pre-commit hook
+### pre-commit hook
 
 This project uses [husky](https://github.com/typicode/husky) for running a `pre-commit` hook,
 which runs format check, linting and unit tests.
