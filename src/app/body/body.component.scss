@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(30, 30, 46);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#main-header{
+	background-color:rgb(30, 30, 46);
+    color:#fff;
+}
+h2{
+    margin:0;
+    display: inline-block;
+}
+.button{
+    background-color:#0066cc;
+	color:#fff;
+    border: none;
+    float: right;
+}
+
+.btn-receiver, .btn-cancel, .btn-accept, .btn-delete{
+    float: right;
+    border-radius: 4px;
+    background-color:#0066cc ;
+    color:#fff;
+    border: none;
+}
+
+.label-sender-id, .label-receiver-id, .label-connection-req-id, .connection-req-id{
+    padding-right: 20px;
+}
+
+ul.connection-req-list{
+    list-style-type: none;
+    background-color: white;
+    color: gray;
+}
+
+

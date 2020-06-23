@@ -14,11 +14,6 @@
     "pre-commit": "yarn run-s format:check lint:angular lint:sass test:ci",
     "e2e": "yarn ng e2e"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run pre-commit"
-    }
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.7",
